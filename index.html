@@ -4,10 +4,22 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pomodoro
-    </title>
+    <title>Pomodoro</title>
 </head>
 <body>
-    
+    <h1>Pomodoro</h1>
+    <label for="time">Choisir votre durée de travail : </label>
+    <input type="number" name="time" id="time" value="25" max="59" min="1">
+    <br>
+    <label for="pause">Temps de pause :</label>
+    <input type="number" name="pause" id="pause" value="5" max="59" min="1">
+    <div id="affTemp">
+        <p id="min">00:</p>
+        <p id="sec">00</p>
+    </div>
+    <input type="button" value="Start" onclick="Click()" id="but">
+    <p>Vous êtes en phase de </p>
+    <p id="state"></p>
+    <script src="script.js"></script>
 </body>
 </html>
