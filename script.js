@@ -11,7 +11,7 @@ let onWork = false;
 let id_interval;
 
 function State(){
-    state.textContent = onWork ? "Travail !":"Pause !";
+    state.textContent = onWork ? "travail !":"pause !";
     console.log(state)
 }
 function Reset(){
