@@ -36,11 +36,11 @@ function Decr(){
     if(onWork){
         tempTot--;
         sec.textContent = tempTot%60 < 10? "0" + tempTot%60:tempTot%60;
-        min.textContent= Math.trunc(tempTot/60)<10 ? "0"+Math.trunc(tempTot/60)+" :":Math.trunc(tempTot/60) + " :";
+        min.textContent= Math.trunc(tempTot/60)<10 ? "0"+Math.trunc(tempTot/60)+":":Math.trunc(tempTot/60) + ":";
     }else{
         tempPause--;
         sec.textContent = tempPause%60 < 10? "0" + tempPause%60:tempPause%60;
-        min.textContent= Math.trunc(tempPause/60)<10 ? "0"+Math.trunc(tempPause/60)+" :":Math.trunc(tempPause/60) + " :";
+        min.textContent= Math.trunc(tempPause/60)<10 ? "0"+Math.trunc(tempPause/60)+":":Math.trunc(tempPause/60) + ":";
     }
     if(tempTot==0 || tempPause==0 ){
         tempPause = pause.value*60;
@@ -52,7 +52,7 @@ function Decr(){
 }
 
 temp.addEventListener("change",(evt)=>{
-    min.textContent = temp.value+":";
+    if(!id_interval)min.textContent = temp.value+":";
 })
 State();
 min.textContent = temp.value+":";

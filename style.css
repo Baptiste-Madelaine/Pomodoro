@@ -1,0 +1,44 @@
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #bb3737;
+    size: 150%;
+}
+h1{
+    margin: auto;
+    text-align: center;
+    text-shadow: 1px 0 0 white, 1px 1px 0 white, 0 1px 0 white, -1px 1px 0 white, -1px 0 0 white, -1px -1px 0 white, 0 -1px 0 white, 1px -1px 0 white;
+    
+}
+#phrase > p{
+    display: inline-block;
+}
+#affTemp > p{
+    display: inline-block;
+}
+#time,#pause{
+    width: 400px;
+    max-width: 50vw;
+    text-align: center;
+}
+
+#min,#sec{
+    font-size: 5em;
+    color: white;
+}
+#affTemp{
+    
+    display: flex;
+    width: 475px;
+    max-width: 60vw;
+    height: 475px;
+    max-height: 60vw;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    background-color:#c75a5a;
+}
+#phrase > p{
+    color: #ffffff;
+}

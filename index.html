@@ -4,22 +4,44 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
     <title>Pomodoro</title>
 </head>
 <body>
-    <h1>Pomodoro</h1>
-    <label for="time">Choisir votre durée de travail : </label>
-    <input type="number" name="time" id="time" value="25" max="59" min="1">
-    <br>
-    <label for="pause">Temps de pause :</label>
-    <input type="number" name="pause" id="pause" value="5" max="59" min="1">
-    <div id="affTemp">
+    <h1 class="m-4 text-success">POMODORO</h1>
+
+    <div class="input-group-lg input-group w-auto m-2">
+        <span class="input-group-text">🕐</span>
+        <div class="form-floating ">
+            <input type="number" name="time" id="time" value="25" max="59" min="1" class="form-control">
+            <label for="time" class="form-label">Durée de travail: (Minutes)</label>
+        </div>
+    </div>
+
+    <div class="input-group input-group-lg w-auto m-2">
+        <span class="input-group-text">☕</span>
+        <div class="form-floating">
+            <input type="number" name="pause" id="pause" value="5" max="59" min="1" class="form-control">
+            <label for="pause">Temps de pause: (Minutes)</label>
+        </div>
+    </div>
+
+    <div id="affTemp" class="m-2">
         <p id="min">00:</p>
         <p id="sec">00</p>
     </div>
-    <input type="button" value="Start" onclick="Click()" id="but">
-    <p>Vous êtes en phase de </p>
-    <p id="state"></p>
+
+    <input type="button" value="Start" onclick="Click()" id="but" class="btn btn-success m-2">
+    
+    
+    
+    <div id="phrase">
+        <p>Vous êtes en phase de</p>
+        <p id="state"></p>
+    </div>
+    
     <script src="script.js"></script>
+    
 </body>
 </html>
