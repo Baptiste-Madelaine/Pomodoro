@@ -10,9 +10,6 @@ Le Pomodoro est une technique de gestion du temps qui favorise la productivité 
 - [Fonctionnalités](#fonctionnalités)
 - [Capture d'écran](#capture-décran)
 - [Installation](#installation)
-- [Utilisation](#utilisation)
-- [Contribuer](#contribuer)
-- [Licence](#licence)
 
 ## À propos du Pomodoro
 
