@@ -26,8 +26,8 @@ function Reset(){
 
 //Fonction mis sur le onClick du boutton
 function Click(){
-    tempTot = temp.value*60;
-    tempPause = pause.value*60;
+    tempTot = parseInt(temp.value)*60;
+    tempPause = parseInt(pause.value)*60;
     console.log(tempTot);
     if(!id_interval){
         id_interval = setInterval(Decr, 1000);
@@ -51,8 +51,8 @@ function Decr(){
         min.textContent= Math.trunc(tempPause/60)<10 ? "0"+Math.trunc(tempPause/60)+":":Math.trunc(tempPause/60) + ":";
     }
     if(tempTot==0 || tempPause==0 ){
-        tempPause = pause.value*60;
-        tempTot = temp.value*60;
+        tempPause = parseInt(pause.value)*60;
+        tempTot = parseInt(temp.value)*60;
         onWork = !onWork;
         State();
     }
