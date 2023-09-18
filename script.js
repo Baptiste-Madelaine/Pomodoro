@@ -11,16 +11,20 @@ let tempPause = 0;
 let onWork = false;
 let id_interval;
 
+//On vérifie si on est en mode travail ou non
 function State(){
     state.textContent = onWork ? "Au travail !":"En pause !";
     body.style.backgroundColor = onWork? "#bb3737":"RGB(25, 135, 83)";
     button.style.backgroundColor = !onWork?  "#bb3737" : "RGB(25, 135, 83)";
-    console.log(state)
 }
+
+//Fonction pour remmetre au tout début du timer et à l'état travail
 function Reset(){
     onWork = true;
     State();
 }
+
+//Fonction mis sur le onClick du boutton
 function Click(){
     tempTot = temp.value*60;
     tempPause = pause.value*60;
@@ -35,6 +39,7 @@ function Click(){
     }
 }
 
+//Fonction Pour décrémenter les secondes
 function Decr(){
     if(onWork){
         tempTot--;
@@ -51,17 +56,18 @@ function Decr(){
         onWork = !onWork;
         State();
     }
-    //console.log(tempTot);
 }
-
+//Les listener des champs du formulaires pour modifier l'affichage si le timer n'est pas lancé
 temp.addEventListener("change",(evt)=>{
-    storage.setItem("work", temp.value);
-    if(!id_interval)min.textContent = temp.value+":";
+    storage.setItem("work", parseInt(temp.value));
+    if(!id_interval)min.textContent = parseInt(temp.value)+":";
 })
 pause.addEventListener("change",(evt)=>{
-    storage.setItem("pause", pause.value);
+    storage.setItem("pause", parseInt(pause.value));
 })
 State();
+
+//On verifie si il y a des variables de stocké dans le local storage et on les remplaces.
 if(storage.getItem("work")!=null){
     temp.value = storage.getItem("work");
 }
