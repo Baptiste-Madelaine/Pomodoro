@@ -8,7 +8,6 @@ Le Pomodoro est une technique de gestion du temps qui favorise la productivité 
 
 - [À propos du Pomodoro](#à-propos-du-pomodoro)
 - [Fonctionnalités](#fonctionnalités)
-- [Capture d'écran](#capture-décran)
 - [Installation](#installation)
 
 ## À propos du Pomodoro
@@ -20,10 +19,6 @@ Le Pomodoro est une méthode de gestion du temps développée par Francesco Ciri
 - **Minuteur Pomodoro**: Configurez des sessions de travail de 25 minutes suivies de courtes pauses.
 - **Personnalisation**: Ajustez la durée des sessions et des pauses selon vos préférences.
 - **Sauvergarde**: Gardez vos temps de sessions de travail à chaque fois.
-
-## Capture d'écran
-
-![Capture d'écran de l'application](screenshot.png)
 
 ## Installation
 
