@@ -2,29 +2,29 @@
 
 ![Pomodoro Logo](logo.png)
 
-Le Pomodoro est une technique de gestion du temps qui favorise la productivité en encourageant des périodes de travail concentré entrecoupées de courtes pauses. Ce projet vous offre une application de gestion du temps basée sur la technique Pomodoro pour vous aider à rester concentré et à améliorer votre productivité.
+Pomodoro is a time management technique that promotes productivity by encouraging periods of focused work interspersed with short breaks. This project provides you with a time management application based on the Pomodoro technique to help you stay focused and enhance your productivity.
 
-## Table des matières
+## Table of Contents
 
-- [À propos du Pomodoro](#à-propos-du-pomodoro)
-- [Fonctionnalités](#fonctionnalités)
+- [About Pomodoro](#about-pomodoro)
+- [Features](#features)
 - [Installation](#installation)
 
-## À propos du Pomodoro
+## About Pomodoro
 
-Le Pomodoro est une méthode de gestion du temps développée par Francesco Cirillo dans les années 1980. Elle consiste à travailler en blocs de temps de 25 minutes, appelés "pomodoros", suivis d'une pause de 5 minutes. Après avoir complété quatre pomodoros, une pause plus longue de 15 à 30 minutes est prise. Cette technique a pour objectif d'augmenter la concentration et la productivité en limitant les distractions.
+Pomodoro is a time management method developed by Francesco Cirillo in the 1980s. It involves working in blocks of 25 minutes, known as "pomodoros," followed by a 5-minute break. After completing four pomodoros, a longer break of 15 to 30 minutes is taken. The aim of this technique is to increase concentration and productivity by limiting distractions.
 
-## Fonctionnalités
+## Features
 
-- **Minuteur Pomodoro**: Configurez des sessions de travail de 25 minutes suivies de courtes pauses.
-- **Personnalisation**: Ajustez la durée des sessions et des pauses selon vos préférences.
-- **Sauvergarde**: Gardez vos temps de sessions de travail à chaque fois.
+- **Pomodoro Timer**: Set up 25-minute work sessions followed by short breaks.
+- **Customization**: Adjust the duration of sessions and breaks to your preferences.
+- **Saving**: Keep track of your work session times each time.
 
 ## Installation
 
-Pour utiliser l'application Pomodoro, suivez ces étapes :
+To use the Pomodoro application, follow these steps:
 
-1. Clonez ce dépôt sur votre machine locale :
+1. Clone this repository to your local machine:
 
    ```shell
    git clone https://github.com/Baptiste-Madelaine/Pomodoro.git
