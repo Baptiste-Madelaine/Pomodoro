@@ -26,8 +26,16 @@ function Reset(){
 
 //Fonction mis sur le onClick du boutton
 function Click(){
-    tempTot = parseInt(temp.value)*60;
-    tempPause = parseInt(pause.value)*60;
+    if(temp.value < 1){
+        tempTot = 1;
+        temp.value = 1;
+    }
+    if(pause.value < 1){
+        tempPause = 1;
+        pause.value = 1;
+    }
+    tempTot = Math.abs(parseInt(temp.value)*60);
+    tempPause = Math.abs(parseInt(pause.value)*60);
     console.log(tempTot);
     if(!id_interval){
         id_interval = setInterval(Decr, 1000);
@@ -51,16 +59,20 @@ function Decr(){
         min.textContent= Math.trunc(tempPause/60)<10 ? "0"+Math.trunc(tempPause/60)+":":Math.trunc(tempPause/60) + ":";
     }
     if(tempTot==0 || tempPause==0 ){
-        tempPause = parseInt(pause.value)*60;
-        tempTot = parseInt(temp.value)*60;
+        tempPause = Math.trunc(pause.value)*60;
+        tempTot = Math.trunc(temp.value)*60;
         onWork = !onWork;
         State();
+    }
+    if(tempTot<0 || tempPause<0){
+        tempPause = Math.abs(tempPause);
+        tempTot=Math.abs(tempTot);
     }
 }
 //Les listener des champs du formulaires pour modifier l'affichage si le timer n'est pas lancé
 temp.addEventListener("change",(evt)=>{
-    storage.setItem("work", parseInt(temp.value));
-    if(!id_interval)min.textContent = parseInt(temp.value)+":";
+    storage.setItem("work", Math.abs(parseInt(temp.value)));
+    if(!id_interval)min.textContent = Math.abs(parseInt(temp.value))+":";
 })
 pause.addEventListener("change",(evt)=>{
     storage.setItem("pause", parseInt(pause.value));
