@@ -23,28 +23,30 @@ function Reset(){
     onWork = true;
     State();
 }
-
+function is_int(value){
+    if((parseFloat(value) == parseInt(value)) && !isNaN(value)){ 
+        return true;
+    } else {
+        return false;
+    }
+}
 //Fonction mis sur le onClick du boutton
 function Click(){
-    if(temp.value < 1){
-        tempTot = 1;
-        temp.value = 1;
-    }
-    if(pause.value < 1){
-        tempPause = 1;
-        pause.value = 1;
-    }
-    tempTot = Math.abs(parseInt(temp.value)*60);
-    tempPause = Math.abs(parseInt(pause.value)*60);
-    console.log(tempTot);
-    if(!id_interval){
-        id_interval = setInterval(Decr, 1000);
-        onWork = !onWork;
-        State();
-        button.value = button.value =="Reset" ? "Start":"Reset";
+    
+    if(!is_int(temp.value) || temp.value <= 0 || !is_int(pause.value) || pause.value <= 0){
+        alert("La valeur n'est pas autorisé");
     }else{
-        Reset();
-    }
+        tempTot = Math.abs(parseInt(temp.value)*60);
+        tempPause = Math.abs(parseInt(pause.value)*60);
+        if(!id_interval){
+            id_interval = setInterval(Decr, 1000);
+            onWork = !onWork;
+            State();
+            button.value = button.value =="Reset" ? "Start":"Reset";
+        }else{
+            Reset();
+        }
+    }   
 }
 
 //Fonction Pour décrémenter les secondes
@@ -64,12 +66,9 @@ function Decr(){
         onWork = !onWork;
         State();
     }
-    if(tempTot<0 || tempPause<0){
-        tempPause = Math.abs(tempPause);
-        tempTot=Math.abs(tempTot);
-    }
 }
 //Les listener des champs du formulaires pour modifier l'affichage si le timer n'est pas lancé
+
 temp.addEventListener("change",(evt)=>{
     storage.setItem("work", Math.abs(parseInt(temp.value)));
     if(!id_interval)min.textContent = Math.abs(parseInt(temp.value))+":";
@@ -77,6 +76,7 @@ temp.addEventListener("change",(evt)=>{
 pause.addEventListener("change",(evt)=>{
     storage.setItem("pause", parseInt(pause.value));
 })
+
 State();
 
 //On verifie si il y a des variables de stocké dans le local storage et on les remplaces.
